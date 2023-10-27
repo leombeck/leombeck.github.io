@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Formulario Contacto - Vive Argentina</title>
+        <link href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles-formulario.css" />
+        <link rel="icon" href="/favicon.ico">
+        </head>
+<body>
+    <div class="form-contacto">
+        <form action="" method="post" id="formulario" name="formulario" target="_blank">
+          <h3>Formulario de Contacto</h3>
+            <fieldset>
+                <label for="destino">¿Qué destino de Argentina quieres visitar?</label>
+                    <select id="destino" name="destino">
+                      <option value="">Selecciona un destino</option>
+                      <option value="1">Buenos Aires / Costa Atlántica</option>
+                      <option value="2">Centro (Córdoba / San Luis)</option>
+                      <option value="3">Litoral (Misiones / Corrientes)</option>
+                      <option value="4">Cuyo (Mendoza / San Juan)</option>
+                      <option value="5">Norte (Salta / Jujuy)</option>
+                      <option value="6">Patagonia</option>
+                    </select>
+                <label for="fecha">Escoge tu fecha de salida</label>
+                 <input type="date" id="fecha" name="fecha"> </input>
+                <label for="adultos">Cantidad de adultos</label>
+                    <select id="adultos" name="adultos">
+                      <option value="">Seleccione</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">Más de 5</option>
+                    </select>
+                <label for="edades_adultos">Edades Adultos</label>
+                <input type="checkbox" name="edades_adultos" value="18-30">18-30</input>
+                <input type="checkbox" name="edades_adultos" value="31-50">31-50</input>
+                <input type="checkbox" name="edades_adultos" value="51-64">51-64</input>
+                <input type="checkbox" name="edades_adultos" value="+65">+65</input>
+                <label for="niños">Cantidad de niños</label>
+                    <select id="niños" name="niños">
+                      <option value="">Seleccione</option>
+                      <option value="1">0</option>
+                      <option value="2">1</option>
+                      <option value="3">2</option>
+                      <option value="4">3</option>
+                      <option value="5">4</option>
+                     <option value="6">5 o más</option>
+                  </select>
+                <label for="edades_niños">Edades Adultos</label>
+                <input type="checkbox" name="edades_niños" value="0-3">0-3</input>
+                <input type="checkbox" name="edades_niños" value="4-7">4-7</input>
+                <input type="checkbox" name="edades_niños" value="8-12">8-12</input>
+                <input type="checkbox" name="edades_niños" value="13-17">13-17</input>          
+            <label id="nombre-label">Nombre Completo</label>
+            <input id="nombre" name="nombre" type="text" placeholder="Ingresa tu nombre"/> <div id="error"></div>
+            <label id="email-label">Email</label>
+            <input id="email" name="email" type="email" placeholder="Ingresa tu Email" required/> 
+            <label id="edad-label">Años (opcional)</label>
+            <input id="años" name="años" type="number" min="18" max="99" placeholder="Ingresa tu edad"/>
+            <label id="teléfono-label">Teléfono</label>
+            <input id="teléfono" name="teléfono" type="tel" placeholder="Ingresa tu teléfono" required/>
+            <label id="ciudad-label">Ciudad</label>
+            <input id="ciudad" name="ciudad" type="text" placeholder="Ingresa tu ciudad" required/>
+            <label for="comentario">Ingresa tus intenciones de viaje
+            <textarea id="comentario" name="comentario" rows="3" cols="30" placeholder="Con este viaje busco..." required></textarea>
+          </label>
+          <div class="btn">
+            <input id="submit" type="submit" value="Enviar" onclick="return enviarFormulario()">
+          </div>
+          </fieldset>
+       </form>
+       </div>
+       <script src="validacionapp.js"></script>
+       </body>
+      </html>

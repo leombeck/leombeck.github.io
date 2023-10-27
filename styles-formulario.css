@@ -1,0 +1,98 @@
+html {
+  width: 100%;
+  height: 100%;
+  color: black;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: "Baskervville", serif;
+  background-image: url(sun-tornado.svg);
+}
+
+/* Estilo Formulario*/
+
+.form-contacto{
+    display:flex;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    
+    }
+
+fieldset{
+  border: none;
+  width: 100%;
+  height: 90%;
+}
+
+.form-contacto h3 {
+    margin: 0 0 12px;
+    padding: 0;
+    color: rgb(6, 247, 206);
+    text-align: center;
+    }
+
+form label {
+    display: block;
+    margin: 0.1rem 0;
+  }
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form input[type="number"],
+form input[type="tel"],
+select
+{
+	width:95%;
+	padding:3px 3px;
+  border: none;
+	border-bottom: 3px solid #ff9100;
+	background-color:whitesmoke;
+	margin:2.5px 0;
+	display:inline-block;
+}
+
+textarea{
+	width:95%;
+	height:50px;
+	border:1px solid #575759;
+	border-radius:3px;
+	background-color:whitesmoke;			
+	margin:4px 0;
+	resize: none;
+}
+
+.btn{
+  display: flex;
+  justify-content: center;
+  padding-bottom:25px;
+  }
+
+form input[type="submit"]{
+	width: 54%;
+	padding:4px;
+	margin-top:6px;
+  margin-bottom:4px;
+	border:1px solid whitesmoke;
+	border-radius:5px;
+	display:block;
+	color:whitesmoke;
+	background: linear-gradient(120deg, rgb(104, 12, 209), rgb(6, 247, 206));
+  font-size: 1.1rem;
+  } 
+
+form input[type="submit"]:hover{
+	cursor:pointer;
+  background: #575759;
+  border: 1.5px solid rgb(6, 247, 206);
+}
+@media only screen and (max-width : 900px) {
+  .form-contacto{
+    min-width: 365px;
+  }
+}

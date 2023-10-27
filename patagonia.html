@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viajes</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/9503b66538.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+  </head>
+  <main>
+    <body>
+      <!--esta sección es el navbar-->
+
+      <header id="header">
+        <div ><a href="index.html"> <img class="logo"src="Logo_chiquito2-removebg-preview.png" alt="Logotipo"></a></div>
+      </div>
+      <div id="clima">
+        <h4>Temperatura</h4>
+        <span id="temperatura"></span>
+        <h4>Humedad:</h4>
+        <span id="humedad"></span>
+        <h4>Cielo</h4>
+        <span id="precipitacion"></span>
+      </div>
+       
+        <!--api del clima-->
+
+      <script>
+        const apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=Neuquen ,Argentina&appid=ff43fe5b3179409bbf63d677147c4c63";
+    
+        axios.get(apiUrl).then((response) => {
+        
+          /* Recibe la temperatura y la paso a c°*/
+          const temperatura = response.data.main.temp-273.15;
+          const centigrados = temperatura.toFixed(1);
+
+
+
+          /*datos de humedad y cielo*/
+          const humedad = response.data.main.humidity;
+          const precipitacion = response.data.weather[0].description;
+    
+
+/*impresion en pantalla de la informacion*/
+          document.getElementById("temperatura").innerHTML = centigrados + "°C";
+          document.getElementById("humedad").innerHTML = humedad + "%";
+          document.getElementById("precipitacion").innerHTML = precipitacion;
+          document.getElementById("city-icon").innerHTML = precipitacion;
+        }).catch((error) =>                 
+      });
+      </script>
+      </header>
+
+<section class="regiones-section" id="regiones-section">
+<h1 class="regiones-tit"> Patagonia </h1>
+<div class="regiones-parrafo">
+  <p class="nosotros-parrafo">
+  En la <strong>Patagonia</strong>, descubrirás paisajes de ensueño. Desde los
+  imponentes glaciares del Parque Nacional Los Glaciares en El
+  Calafate hasta el impresionante Parque Nacional Nahuel Huapi en
+  <strong>Bariloche</strong>, te sorprenderás con la belleza natural de esta región.<br>
+  Disfruta de emocionantes excursiones en kayak, avistaje de
+  ballenas en Península Valdés o aventúrate en una caminata por el
+  famoso Perito Moreno. 
+</p>
+</div>
+    <div class="galeria">
+        <img src="https://github.com/leombeck/imagenesturismo/blob/main/Patagonia/Parque%20Nahuel%20Huapi.jpg?raw=true" alt="">
+        <img src="https://github.com/leombeck/imagenesturismo/blob/main/Patagonia/Parque%20glaciares%202.jpg?raw=true" alt="">
+        <img src="https://github.com/leombeck/imagenesturismo/blob/main/Patagonia/Pinguinos%20peninsula%20valdez.jpg?raw=true" alt="">
+        <img src="https://github.com/leombeck/imagenesturismo/blob/main/Patagonia/Ushuaia2.jpg?raw=true" alt="">
+        <img src="https://github.com/leombeck/imagenesturismo/blob/main/Patagonia/Ballena%20peninsula%20valdez.jpg?raw=true" alt="">
+        <img src="https://github.com/leombeck/imagenesturismo/blob/main/Patagonia/parque-glaciares.jpg?raw=true" alt="">
+
+    </div>
+    <div>
+      <a href="formularioindex.html" target="blank">
+        <button class="btn-contacto">Contacto</button>
+      </a>
+        </div>
+</section>
+       
+      <!--esta sección footer-->
+
+      <footer>
+        <div class="redes">
+          <a href="https://www.facebook.com/?locale=es_LA" target= "_blank" class="fa fa-facebook"></a>
+          <a href="https://www.youtube.com/" target= "_blank" class="fa fa-youtube"></a>
+          <a href="https://www.instagram.com/" target= "_blank" class="fa fa-instagram"></a>
+          <a href="https://accounts.google.com/AccountChooser/signinchooser?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&flowName=GlifWebSignIn&flowEntry=AccountChooser&theme=glif" target= "_blank" class="fa fa-envelope"></a>
+          <a href="https://api.whatsapp.com/send/?phone=5491122334455&text&type=phone_number&app_absent=0" target= "_blank" class="fa fa-whatsapp"></a>
+        </div>
+        <p>Copyright Vive Argentina &#174</p>
+      </footer>
+    </body>
+  </main>
+  <script src="app.js"></script>
+</html>
