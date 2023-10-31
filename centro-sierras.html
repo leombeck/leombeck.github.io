@@ -17,9 +17,10 @@
       <!--esta sección es el navbar-->
 
       <header id="header">
-        <div >
+        <div>
           <a href="index.html"> <img class="logo"src="Logo_chiquito2-removebg-preview.png" alt="Logotipo"></a>
         </div>
+        <div id="clima">
         <h4>Temperatura</h4>
         <span id="temperatura"></span>
         <h4>Humedad:</h4>
@@ -27,6 +28,7 @@
         <h4>Cielo</h4>
         <span id="precipitacion"></span>
           </div>
+        </div>
       <!--api del clima-->
 
       <script>
@@ -47,8 +49,9 @@
           document.getElementById("temperatura").innerHTML = centigrados + "°C";
           document.getElementById("humedad").innerHTML = humedad + "%";
           document.getElementById("precipitacion").innerHTML = precipitacion;
+       /*manejo de errores*/
         }).catch((error) => {
-        });
+          alert (" NO HAY DATOS DEL CLIMA")});
       </script>
 
 

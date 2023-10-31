@@ -47,8 +47,9 @@
           document.getElementById("temperatura").innerHTML = centigrados + "°C";
           document.getElementById("humedad").innerHTML = humedad + "%";
           document.getElementById("precipitacion").innerHTML = precipitacion;
+       /*manejo de errores*/
         }).catch((error) => {
-        });
+          alert (" NO HAY DATOS DEL CLIMA")});
       </script>
       </header>
 
