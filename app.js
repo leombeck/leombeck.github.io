@@ -52,7 +52,7 @@ var currentItem = 0;
 
 //elegir las personas
 function elegirInfo() {
-  let item = regiones[currentItem];
+  var item = regiones[currentItem];
   region.textContent = item.region;
   lugar.textContent = item.lugar;
   foto.src = item.img;
