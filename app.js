@@ -40,15 +40,15 @@ const regiones = [
 
 // Seleccionar articulos
 
-let region = document.getElementById("region");
-let lugar = document.getElementById("lugar");
-let foto = document.getElementById("foto")
+const region = document.getElementById("region");
+const lugar = document.getElementById("lugar");
+const foto = document.getElementById("foto")
 
-let prevBtn = document.querySelector(".prev-btn");
-let nextBtn = document.querySelector(".next-btn");
+const prevBtn = document.querySelector(".prev-btn");
+const nextBtn = document.querySelector(".next-btn");
 
 //elemento inicial
-let currentItem = 0;
+var currentItem = 0;
 
 //elegir las personas
 function elegirInfo() {
